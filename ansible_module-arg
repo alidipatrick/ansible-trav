@@ -1,0 +1,6 @@
+#if "$1" = '' ; then \
+#    echo "Veuillez ajouter le nom du module à la fin de la commande."
+#else
+    echo "Lancement de Ansible avec le module : $1" && \
+    ansible all --private-key ~/.ssh/ansible -i inventory -m $1
+#fi
